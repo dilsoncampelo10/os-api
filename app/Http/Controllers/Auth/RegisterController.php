@@ -12,6 +12,8 @@ class RegisterController extends Controller
     {
         $data = $request->all();
 
-        return User::create($data);
+        $user = User::create($data);
+        
+        return response()->json($user, 201);
     }
 }
