@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('login')->unique();
             $table->string('phone', 18);
-            $table->string('group', 100);
+            $table->enum('group', ['owner', 'admin', 'common']);
             $table->boolean('status');
             $table->integer('points')->default(0);
             $table->timestamp('email_verified_at')->nullable();
