@@ -24,7 +24,7 @@ class RequestUser extends FormRequest
         return [
             'first_name' => 'string|max:255|min:4',
             'last_name' => 'string|max:255|min:4',
-            'email' => 'emailmax:255|min:10',
+            'email' => 'email|max:255|min:10',
             'phone' => 'max:18|min:13',
             'login' => 'min:5'
         ];
